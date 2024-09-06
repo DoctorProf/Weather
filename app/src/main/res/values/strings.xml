@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="buttonGetWeather">Weather</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="temperature">Temperature</string>
+    <string name="condition">Condition</string>
+    <string name="humidity">Humidity</string>
+    <string name="cloud">Cloud</string>
+</resources>

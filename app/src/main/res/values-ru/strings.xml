@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="buttonGetWeather">Погода</string>
+    <string name="country">Страна</string>
+    <string name="city">Город</string>
+    <string name="temperature">Температура</string>
+    <string name="condition">Состояние</string>
+    <string name="humidity">Влажность</string>
+    <string name="cloud">Облака</string>
+</resources>
