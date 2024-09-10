@@ -95,19 +95,21 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<WeatherResponse>, response: Response<WeatherResponse>) {
                 if (response.isSuccessful) {
                     val weatherResponse = response.body()
-                    binding.textViewTime.text = weatherResponse?.location?.localtime
-                    binding.textViewCountry.text = weatherResponse?.location?.country
-                    binding.textViewCity.text = weatherResponse?.location?.name
-                    binding.imageViewDay.setImageResource(if(weatherResponse?.current?.is_day == 1) R.drawable.sun else R.drawable.moon )
-                    binding.textViewTemperature.text = "${weatherResponse?.current?.temp_c} °C"
-                    binding.textViewCondition.text = weatherResponse?.current?.condition?.text
-                    binding.textViewHumidity.text = "${getString(R.string.humidity)} ${weatherResponse?.current?.humidity} %"
-                    binding.textViewCloud.text = "${getString(R.string.cloud)} ${weatherResponse?.current?.cloud} %"
-                    binding.textViewSunrise.text = weatherResponse?.forecast?.forecastday?.getOrNull(0)?.astro?.sunrise
-                    binding.textViewMoonrise.text = weatherResponse?.forecast?.forecastday?.getOrNull(0)?.astro?.moonrise
-                    binding.textViewMinTemp.text = "${weatherResponse?.forecast?.forecastday?.getOrNull(0)?.day?.mintemp_c} °C"
-                    binding.textViewMaxTemp.text = "${weatherResponse?.forecast?.forecastday?.getOrNull(0)?.day?.maxtemp_c} °C"
-                    binding.textViewRainChance.text = "${weatherResponse?.forecast?.forecastday?.getOrNull(0)?.day?.daily_chance_of_rain} %"
+                    with(binding) {
+                        textViewTime.text = weatherResponse?.location?.localtime
+                        textViewCountry.text = weatherResponse?.location?.country
+                        textViewCity.text = weatherResponse?.location?.name
+                        imageViewDay.setImageResource(if(weatherResponse?.current?.is_day == 1) R.drawable.sun else R.drawable.moon )
+                        textViewTemperature.text = "${weatherResponse?.current?.temp_c} °C"
+                        textViewCondition.text = weatherResponse?.current?.condition?.text
+                        textViewHumidity.text = "${getString(R.string.humidity)} ${weatherResponse?.current?.humidity} %"
+                        textViewCloud.text = "${getString(R.string.cloud)} ${weatherResponse?.current?.cloud} %"
+                        textViewSunrise.text = weatherResponse?.forecast?.forecastday?.getOrNull(0)?.astro?.sunrise
+                        textViewMoonrise.text = weatherResponse?.forecast?.forecastday?.getOrNull(0)?.astro?.moonrise
+                        textViewMinTemp.text = "${weatherResponse?.forecast?.forecastday?.getOrNull(0)?.day?.mintemp_c} °C"
+                        textViewMaxTemp.text = "${weatherResponse?.forecast?.forecastday?.getOrNull(0)?.day?.maxtemp_c} °C"
+                        textViewRainChance.text = "${weatherResponse?.forecast?.forecastday?.getOrNull(0)?.day?.daily_chance_of_rain} %"
+                    }
                 } else {
                     println("Request failed with code: ${response.code()}")
                 }
@@ -132,7 +134,7 @@ class MainActivity : AppCompatActivity() {
         Glide.with(this)
             .load(R.drawable.rain)
             .apply(RequestOptions.bitmapTransform(RoundedCorners(500)))
-            .into(binding.imageViewRain);
+            .into(binding.imageViewRain)
         binding.button.setOnClickListener {
             val city = binding.editText.text.toString()
 
