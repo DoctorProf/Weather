@@ -7,6 +7,9 @@ android {
     namespace = "com.example.weather"
     compileSdk = 34
 
+    viewBinding {
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.example.weather"
         minSdk = 24
@@ -43,6 +46,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.converter.gson)
+    implementation(libs.glide)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

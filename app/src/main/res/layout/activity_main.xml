@@ -5,65 +5,187 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/blue">
 
     <TextView
-        android:id="@+id/textViewCondition"
+        android:id="@+id/textViewMinTemp"
         android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:text="@string/condition"
+        android:layout_height="wrap_content"
+        android:text="@string/minTemp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewHumidity"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:text="@string/humidity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.723" />
 
-    <TextView
-        android:id="@+id/textViewCloud"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:text="@string/cloud"
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="41dp"
+        android:src="@drawable/moonrise"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.611" />
 
     <TextView
         android:id="@+id/textViewTemperature"
         android:layout_width="wrap_content"
-        android:layout_height="23dp"
+        android:layout_height="wrap_content"
         android:text="@string/temperature"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <TextView
+        android:id="@+id/textViewCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/condition"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.438" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="91dp"
-        android:layout_height="84dp"
-        android:src="@drawable/cloud"
+    <TextView
+        android:id="@+id/textViewHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/humidity"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <TextView
+        android:id="@+id/textViewCloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cloud"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.564" />
+
+
+
+    <TextView
+        android:id="@+id/textViewSunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunrise"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674" />
+
+    <TextView
+        android:id="@+id/textViewMoonrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moonrise"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674" />
+
+    <TextView
+        android:id="@+id/textViewMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maxTemp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <TextView
+        android:id="@+id/textViewCountry"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="@string/appbar_scrolling_view_behavior"
+        android:minHeight="48dp"
+        android:text="@string/country"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="@string/appbar_scrolling_view_behavior"
+        android:minHeight="48dp"
+        android:text="@string/dateTime"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <ImageView
+        android:id="@+id/imageViewDay"
+        android:layout_width="27dp"
+        android:layout_height="30dp"
+        android:src="@drawable/sun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="41dp"
+        android:src="@drawable/sunrise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.611" />
 
     <EditText
         android:id="@+id/editText"
@@ -91,40 +213,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.247" />
 
-    <TextView
-        android:id="@+id/textViewCountry"
-        style="@style/Widget.AppCompat.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:digits="@string/appbar_scrolling_view_behavior"
-        android:text="@string/country"
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="87dp"
+        android:layout_height="92dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cloud"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
-
-    <TextView
-        android:id="@+id/textViewCity"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:text="@string/city"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.031"
+        android:contentDescription="default"/>
 
     <ImageView
-        android:id="@+id/imageViewDay"
-        android:layout_width="27dp"
-        android:layout_height="30dp"
-        android:src="@drawable/sun"
+        android:id="@+id/imageViewRain"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.987" />
+
+    <TextView
+        android:id="@+id/textViewRainChance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

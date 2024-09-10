@@ -8,4 +8,10 @@
     <string name="condition">Состояние</string>
     <string name="humidity">Влажность</string>
     <string name="cloud">Облака</string>
+    <string name="dateTime">Дата/Время</string>
+    <string name="sunrise">Восход</string>
+    <string name="moonrise">Восход луны</string>
+    <string name="minTemp">Мин. Темп.</string>
+    <string name="maxTemp">Макс. Темп.</string>
+
 </resources>

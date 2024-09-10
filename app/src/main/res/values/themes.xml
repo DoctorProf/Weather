@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Weather" parent="Base.Theme.Weather" />
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>

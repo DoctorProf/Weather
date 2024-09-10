@@ -7,4 +7,9 @@
     <string name="condition">Condition</string>
     <string name="humidity">Humidity</string>
     <string name="cloud">Cloud</string>
+    <string name="dateTime">DateTime</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="moonrise">Moonrise</string>
+    <string name="minTemp">Min. Temp.</string>
+    <string name="maxTemp">Max. Temp.</string>
 </resources>
